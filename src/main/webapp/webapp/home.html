@@ -1,0 +1,671 @@
+<html>
+	<head>
+		<title>Train Trckr</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Link to CSS file -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<!-- Bootstrap includes (jQuery included too!) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+	
+		<!-- Navigation bar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				
+				<!-- Logo -->
+				<div class="navbar-header">
+					<a href="home.html"><img style="height: 50px" src="Trainlogo.png"></a>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container">
+			<h1>Infrastructure Section</h1>
+			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#infrastructure-well">See Infrastructure Section</button>
+		
+			<!-- The infrastructure section -->
+			<div id="infrastructure-well" class="well container collapse">
+			
+				<form class="form-horizontal" name="myForm" action="stationsmap.jsp" method="get" >
+					<h2>Choose two stations for comparison</h2>
+					<br>
+					
+					<div class="form-group">
+						<label class="control-label col-sm-2">First Station</label>
+						<select class="stationSelect form-control" name="code" id="st1">
+							<option value='ADMTN'>Adamstown</option>
+							<option value='ARHAN'>Ardrahan</option>
+							<option value='ARKLW'>Arklow</option>
+							<option value='ASHTN'>Ashtown</option>
+							<option value='ATHRY'>Athenry</option>
+							<option value='ATHY'>Athy</option>
+							<option value='ATLNE'>Athlone</option>
+							<option value='ATMON'>Attymon</option>
+							<option value='BALNA'>Ballina</option>
+							<option value='BBRDG'>Broombridge</option>
+							<option value='BBRGN'>Balbriggan</option>
+							<option value='BBRHY'>Ballybrophy</option>
+							<option value='BCLAN'>Ballycullane</option>
+							<option value='BFSTC'>Belfast Central</option>
+							<option value='BHILL'>Birdhill</option>
+							<option value='BMOTE'>Ballymote</option>
+							<option value='BOYLE'>Boyle</option>
+							<option value='BRAY'>Bray</option>
+							<option value='BRGTN'>Bridgetown</option>
+							<option value='BROCK'>Blackrock</option>
+							<option value='BSLOE'>Ballinasloe</option>
+							<option value='BTEER'>Banteer</option>
+							<option value='BTSTN'>Booterstown</option>
+							<option value='BYHNS'>Ballyhaunis</option>
+							<option value='BYSDE'>Bayside</option>
+							<option value='CAHIR'>Cahir</option>
+							<option value='CCONL'>Castleconnell</option>
+							<option value='CGLOE'>Carrigaloe</option>
+							<option value='CGTWL'>Carrigtwohill</option>
+							<option value='CHORC'>Cherry Orchard</option>
+							<option value='CJRDN'>Cloughjordan</option>
+							<option value='CKOSH'>Carrick on Shannon</option>
+							<option value='CKOSR'>Carrick on Suir</option>
+							<option value='CLARA'>Clara</option>
+							<option value='CLBAR'>Castlebar</option>
+							<option value='CLDKN'>Clondalkin</option>
+							<option value='CLMEL'>Clonmel</option>
+							<option value='CLMRS'>Claremorris</option>
+							<option value='CLONF'>Clondalkin</option>
+							<option value='CLSLA'>Clonsilla</option>
+							<option value='CMINE'>Coolmine</option>
+							<option value='CNLLY'>Dublin Connolly</option>
+							<option value='CNOCK'>Castleknock</option>
+							<option value='COBH'>Cobh</option>
+							<option value='COLNY'>Collooney</option>
+							<option value='CORK'>Cork</option>
+							<option value='CPILE'>Campile</option>
+							<option value='CRGHW'>Craughwell</option>
+							<option value='CRLOW'>Carlow</option>
+							<option value='CSREA'>Castlerea</option>
+							<option value='CTARF'>Clontarf Road</option>
+							<option value='CURAH'>Curragh</option>
+							<option value='CVILL'>Charleville</option>
+							<option value='DBATE'>Donabate</option>
+							<option value='DBYNE'>Dunboyne</option>
+							<option value='DCDRA'>Drumcondra</option>
+							<option value='DCKLS'>Docklands</option>
+							<option value='DDALK'>Dundalk</option>
+							<option value='DGHDA'>Drogheda</option>
+							<option value='DLERY'>Dun Laoghaire</option>
+							<option value='DLKEY'>Dalkey</option>
+							<option value='DRMOD'>Dromod</option>
+							<option value='ECRTY'>Enniscorthy</option>
+							<option value='ENFLD'>Enfield</option>
+							<option value='ENNIS'>Ennis</option>
+							<option value='ETOWN'>Edgeworthstown</option>
+							<option value='FFORE'>Farranfore</option>
+							<option value='FOTA'>Fota</option>
+							<option value='FXFRD'>Foxford</option>
+							<option value='GALWY'>Galway</option>
+							<option value='GCDK'>Grand Canal Dock</option>
+							<option value='GHANE'>Glounthaune</option>
+							<option value='GLGRY'>Glenageary</option>
+							<option value='GOREY'>Gorey</option>
+							<option value='GORT'>Gort</option>
+							<option value='GRGRD'>Clongriffin</option>
+							<option value='GSTNS'>Greystones</option>
+							<option value='GSTON'>Gormanston</option>
+							<option value='HAFLD'>Hansfield</option>
+							<option value='HAZEF'>Hazelhatch</option>
+							<option value='HOWTH'>Howth</option>
+							<option value='HSTON'>Dublin Heuston</option>
+							<option value='HTOWN'>Harmonstown</option>
+							<option value='HWTHJ'>Howth Junction</option>
+							<option value='HZLCH'>Hazelhatch</option>
+							<option value='KBRCK'>Kilbarrack</option>
+							<option value='KCOCK'>Kilcock</option>
+							<option value='KCOOL'>Kilcoole</option>
+							<option value='KDARE'>Kildare</option>
+							<option value='KILNY'>Killiney</option>
+							<option value='KKNNY'>Kilkenny</option>
+							<option value='KLRNY'>Killarney</option>
+							<option value='KLSTR'>Killester</option>
+							<option value='LBURN'>Lisburn</option>
+							<option value='LDWNE'>Lansdowne Road</option>
+							<option value='LFORD'>Longford</option>
+							<option value='LMRCK'>Limerick</option>
+							<option value='LMRKJ'>Limerick Junction</option>
+							<option value='LSLND'>LittleIsland</option>
+							<option value='LTOWN'>Laytown</option>
+							<option value='LURGN'>Lurgan</option>
+							<option value='LXCON'>Leixlip (Confey)</option>
+							<option value='LXLSA'>Leixlip (Louisa Bridge)</option>
+							<option value='M3WAY'>M3 Parkway</option>
+							<option value='MDLTN'>Midleton</option>
+							<option value='MHIDE'>Malahide</option>
+							<option value='MLGAR'>Mullingar</option>
+							<option value='MLLOW'>Mallow</option>
+							<option value='MLSRT'>Millstreet</option>
+							<option value='MNEBG'>Muine Bheag</option>
+							<option value='MNLAJ'>Manulla Junction</option>
+							<option value='MONVN'>Monasterevin</option>
+							<option value='MYNTH'>Maynooth</option>
+							<option value='NBRGE'>Newbridge</option>
+							<option value='NEWRY'>Newry</option>
+							<option value='NNAGH'>Nenagh</option>
+							<option value='ORNMR'>Oranmore</option>
+							<option value='PDOWN'>Portadown</option>
+							<option value='PERSE'>Dublin Pearse</option>
+							<option value='PHNPK'>Navan Road Parkway</option>
+							<option value='PMNCK'>Portmarnock</option>
+							<option value='PTLSE'>Portlaoise</option>
+							<option value='PTRTN'>Portarlington</option>
+							<option value='PWESF'>Cherry Orchard</option>
+							<option value='RAHNY'>Raheny</option>
+							<option value='RBROK'>Rushbrooke</option>
+							<option value='RCREA'>Roscrea</option>
+							<option value='RDRUM'>Rathdrum</option>
+							<option value='RLEPT'>Rosslare Europort</option>
+							<option value='RLSTD'>Rosslare Strand</option>
+							<option value='RLUSK'>Rush and Lusk</option>
+							<option value='RMORE'>Rathmore</option>
+							<option value='RSCMN'>Roscommon</option>
+							<option value='SALNS'>Sallins</option>
+							<option value='SCOVE'>Sandycove</option>
+							<option value='SEAPT'>Seapoint</option>
+							<option value='SHILL'>Salthill</option>
+							<option value='SIDNY'>Sydney Parade</option>
+							<option value='SKILL'>Shankill</option>
+							<option value='SKRES'>Skerries</option>
+							<option value='SLIGO'>Sligo</option>
+							<option value='SMONT'>Sandymount</option>
+							<option value='SUTTN'>Sutton</option>
+							<option value='SXMBR'>Sixmilebridge</option>
+							<option value='TARA'>Tara Street</option>
+							<option value='THRLS'>Thurles</option>
+							<option value='THTWN'>Thomastown</option>
+							<option value='TIPRY'>Tipperary</option>
+							<option value='TMORE'>Tullamore</option>
+							<option value='TPMOR'>Templemore</option>
+							<option value='TRLEE'>Tralee</option>
+							<option value='WBDGE'>Wellingtonbridge</option>
+							<option value='WBROK'>Woodbrook</option>
+							<option value='WFORD'>Waterford</option>
+							<option value='WLAWN'>Woodlawn</option>
+							<option value='WLOW'>Wicklow</option>
+							<option value='WPORT'>Westport</option>
+							<option value='WXFRD'>Wexford</option>
+						</select>							
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label col-sm-2">Second Station</label>
+						<select class="stationSelect form-control" name="code2">
+							<option value='ADMTN'>Adamstown</option>
+							<option value='ARHAN'>Ardrahan</option>
+							<option value='ARKLW'>Arklow</option>
+							<option value='ASHTN'>Ashtown</option>
+							<option value='ATHRY'>Athenry</option>
+							<option value='ATHY'>Athy</option>
+							<option value='ATLNE'>Athlone</option>
+							<option value='ATMON'>Attymon</option>
+							<option value='BALNA'>Ballina</option>
+							<option value='BBRDG'>Broombridge</option>
+							<option value='BBRGN'>Balbriggan</option>
+							<option value='BBRHY'>Ballybrophy</option>
+							<option value='BCLAN'>Ballycullane</option>
+							<option value='BFSTC'>Belfast Central</option>
+							<option value='BHILL'>Birdhill</option>
+							<option value='BMOTE'>Ballymote</option>
+							<option value='BOYLE'>Boyle</option>
+							<option value='BRAY'>Bray</option>
+							<option value='BRGTN'>Bridgetown</option>
+							<option value='BROCK'>Blackrock</option>
+							<option value='BSLOE'>Ballinasloe</option>
+							<option value='BTEER'>Banteer</option>
+							<option value='BTSTN'>Booterstown</option>
+							<option value='BYHNS'>Ballyhaunis</option>
+							<option value='BYSDE'>Bayside</option>
+							<option value='CAHIR'>Cahir</option>
+							<option value='CCONL'>Castleconnell</option>
+							<option value='CGLOE'>Carrigaloe</option>
+							<option value='CGTWL'>Carrigtwohill</option>
+							<option value='CHORC'>Cherry Orchard</option>
+							<option value='CJRDN'>Cloughjordan</option>
+							<option value='CKOSH'>Carrick on Shannon</option>
+							<option value='CKOSR'>Carrick on Suir</option>
+							<option value='CLARA'>Clara</option>
+							<option value='CLBAR'>Castlebar</option>
+							<option value='CLDKN'>Clondalkin</option>
+							<option value='CLMEL'>Clonmel</option>
+							<option value='CLMRS'>Claremorris</option>
+							<option value='CLONF'>Clondalkin</option>
+							<option value='CLSLA'>Clonsilla</option>
+							<option value='CMINE'>Coolmine</option>
+							<option value='CNLLY'>Dublin Connolly</option>
+							<option value='CNOCK'>Castleknock</option>
+							<option value='COBH'>Cobh</option>
+							<option value='COLNY'>Collooney</option>
+							<option value='CORK'>Cork</option>
+							<option value='CPILE'>Campile</option>
+							<option value='CRGHW'>Craughwell</option>
+							<option value='CRLOW'>Carlow</option>
+							<option value='CSREA'>Castlerea</option>
+							<option value='CTARF'>Clontarf Road</option>
+							<option value='CURAH'>Curragh</option>
+							<option value='CVILL'>Charleville</option>
+							<option value='DBATE'>Donabate</option>
+							<option value='DBYNE'>Dunboyne</option>
+							<option value='DCDRA'>Drumcondra</option>
+							<option value='DCKLS'>Docklands</option>
+							<option value='DDALK'>Dundalk</option>
+							<option value='DGHDA'>Drogheda</option>
+							<option value='DLERY'>Dun Laoghaire</option>
+							<option value='DLKEY'>Dalkey</option>
+							<option value='DRMOD'>Dromod</option>
+							<option value='ECRTY'>Enniscorthy</option>
+							<option value='ENFLD'>Enfield</option>
+							<option value='ENNIS'>Ennis</option>
+							<option value='ETOWN'>Edgeworthstown</option>
+							<option value='FFORE'>Farranfore</option>
+							<option value='FOTA'>Fota</option>
+							<option value='FXFRD'>Foxford</option>
+							<option value='GALWY'>Galway</option>
+							<option value='GCDK'>Grand Canal Dock</option>
+							<option value='GHANE'>Glounthaune</option>
+							<option value='GLGRY'>Glenageary</option>
+							<option value='GOREY'>Gorey</option>
+							<option value='GORT'>Gort</option>
+							<option value='GRGRD'>Clongriffin</option>
+							<option value='GSTNS'>Greystones</option>
+							<option value='GSTON'>Gormanston</option>
+							<option value='HAFLD'>Hansfield</option>
+							<option value='HAZEF'>Hazelhatch</option>
+							<option value='HOWTH'>Howth</option>
+							<option value='HSTON'>Dublin Heuston</option>
+							<option value='HTOWN'>Harmonstown</option>
+							<option value='HWTHJ'>Howth Junction</option>
+							<option value='HZLCH'>Hazelhatch</option>
+							<option value='KBRCK'>Kilbarrack</option>
+							<option value='KCOCK'>Kilcock</option>
+							<option value='KCOOL'>Kilcoole</option>
+							<option value='KDARE'>Kildare</option>
+							<option value='KILNY'>Killiney</option>
+							<option value='KKNNY'>Kilkenny</option>
+							<option value='KLRNY'>Killarney</option>
+							<option value='KLSTR'>Killester</option>
+							<option value='LBURN'>Lisburn</option>
+							<option value='LDWNE'>Lansdowne Road</option>
+							<option value='LFORD'>Longford</option>
+							<option value='LMRCK'>Limerick</option>
+							<option value='LMRKJ'>Limerick Junction</option>
+							<option value='LSLND'>LittleIsland</option>
+							<option value='LTOWN'>Laytown</option>
+							<option value='LURGN'>Lurgan</option>
+							<option value='LXCON'>Leixlip (Confey)</option>
+							<option value='LXLSA'>Leixlip (Louisa Bridge)</option>
+							<option value='M3WAY'>M3 Parkway</option>
+							<option value='MDLTN'>Midleton</option>
+							<option value='MHIDE'>Malahide</option>
+							<option value='MLGAR'>Mullingar</option>
+							<option value='MLLOW'>Mallow</option>
+							<option value='MLSRT'>Millstreet</option>
+							<option value='MNEBG'>Muine Bheag</option>
+							<option value='MNLAJ'>Manulla Junction</option>
+							<option value='MONVN'>Monasterevin</option>
+							<option value='MYNTH'>Maynooth</option>
+							<option value='NBRGE'>Newbridge</option>
+							<option value='NEWRY'>Newry</option>
+							<option value='NNAGH'>Nenagh</option>
+							<option value='ORNMR'>Oranmore</option>
+							<option value='PDOWN'>Portadown</option>
+							<option value='PERSE'>Dublin Pearse</option>
+							<option value='PHNPK'>Navan Road Parkway</option>
+							<option value='PMNCK'>Portmarnock</option>
+							<option value='PTLSE'>Portlaoise</option>
+							<option value='PTRTN'>Portarlington</option>
+							<option value='PWESF'>Cherry Orchard</option>
+							<option value='RAHNY'>Raheny</option>
+							<option value='RBROK'>Rushbrooke</option>
+							<option value='RCREA'>Roscrea</option>
+							<option value='RDRUM'>Rathdrum</option>
+							<option value='RLEPT'>Rosslare Europort</option>
+							<option value='RLSTD'>Rosslare Strand</option>
+							<option value='RLUSK'>Rush and Lusk</option>
+							<option value='RMORE'>Rathmore</option>
+							<option value='RSCMN'>Roscommon</option>
+							<option value='SALNS'>Sallins</option>
+							<option value='SCOVE'>Sandycove</option>
+							<option value='SEAPT'>Seapoint</option>
+							<option value='SHILL'>Salthill</option>
+							<option value='SIDNY'>Sydney Parade</option>
+							<option value='SKILL'>Shankill</option>
+							<option value='SKRES'>Skerries</option>
+							<option value='SLIGO'>Sligo</option>
+							<option value='SMONT'>Sandymount</option>
+							<option value='SUTTN'>Sutton</option>
+							<option value='SXMBR'>Sixmilebridge</option>
+							<option value='TARA'>Tara Street</option>
+							<option value='THRLS'>Thurles</option>
+							<option value='THTWN'>Thomastown</option>
+							<option value='TIPRY'>Tipperary</option>
+							<option value='TMORE'>Tullamore</option>
+							<option value='TPMOR'>Templemore</option>
+							<option value='TRLEE'>Tralee</option>
+							<option value='WBDGE'>Wellingtonbridge</option>
+							<option value='WBROK'>Woodbrook</option>
+							<option value='WFORD'>Waterford</option>
+							<option value='WLAWN'>Woodlawn</option>
+							<option value='WLOW'>Wicklow</option>
+							<option value='WPORT'>Westport</option>
+							<option value='WXFRD'>Wexford</option>
+						</select>
+					</div>
+						
+					<div class="form-group">
+						<label class="control-label col-sm-2">Range (km)</label>
+						<input class="stationSelect form-control" type="text" name="range" placeholder="20km">
+					</div>
+						
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" name="Submit" class="btn btn-primary active">
+						</div>
+					</div>
+				</form>
+				
+				<br>
+				
+				<!-- Real time info section -->
+				<form class="form-horizontal" name="myForm" action="currenttrains.jsp" method="post">
+					<h2>Or view all trains currently running</h2>
+					<br>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input value="View All" type="submit" name="Submit" class="btn btn-primary active">
+						</div>
+					</div>
+				</form>
+				
+				<!-- data-toggle displays modal without javascript -->
+				<button type="button" class="btn btn-link" data-toggle="modal" data-target="#infrastructure_help">Need some help?</button>
+				
+				<div class="modal fade" id="infrastructure_help">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<!-- header -->
+							<div class="modal-header">
+								<h3 class="modal-title">What to do</h3>
+							</div>
+
+							<!-- body -->
+							<div class="modal-body">
+								<p style="text-align:center">Select two stations to learn about, and compare! Set a range for each station's surrounding area.</p>
+								<p style="text-align:center">Or view all trains currently running in Ireland!</p>
+							</div>
+
+							<!-- button -->
+							<div class="modal-footer">
+								<button type="button" class="close" data-dismiss="modal">Got it</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				
+			</div> <!-- End of well -->
+			
+		</div>
+			
+		<br>
+			
+		<div class="container">
+			<h1>Commuter Section</h1>
+			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#commuter-well">See Commuter Section</button>
+		
+			<!-- The commuter information section -->
+			<div id="commuter-well" class="well container collapse">
+			
+			<form class="form-horizontal" name="myForm" action="commuter.jsp" method="get" >
+				<h2>Choose a boarding station and time frame</h2>
+				<br>
+			
+				<div class="form-group">
+					<label class="control-label col-sm-2">Boarding at</label>
+					<select class="stationSelect form-control" name="code">
+					<option value='ADMTN'>Adamstown</option>
+					<option value='ARHAN'>Ardrahan</option>
+					<option value='ARKLW'>Arklow</option>
+					<option value='ASHTN'>Ashtown</option>
+					<option value='ATHRY'>Athenry</option>
+					<option value='ATHY'>Athy</option>
+					<option value='ATLNE'>Athlone</option>
+					<option value='ATMON'>Attymon</option>
+					<option value='BALNA'>Ballina</option>
+					<option value='BBRDG'>Broombridge</option>
+					<option value='BBRGN'>Balbriggan</option>
+					<option value='BBRHY'>Ballybrophy</option>
+					<option value='BCLAN'>Ballycullane</option>
+					<option value='BFSTC'>Belfast Central</option>
+					<option value='BHILL'>Birdhill</option>
+					<option value='BMOTE'>Ballymote</option>
+					<option value='BOYLE'>Boyle</option>
+					<option value='BRAY'>Bray</option>
+					<option value='BRGTN'>Bridgetown</option>
+					<option value='BROCK'>Blackrock</option>
+					<option value='BSLOE'>Ballinasloe</option>
+					<option value='BTEER'>Banteer</option>
+					<option value='BTSTN'>Booterstown</option>
+					<option value='BYHNS'>Ballyhaunis</option>
+					<option value='BYSDE'>Bayside</option>
+					<option value='CAHIR'>Cahir</option>
+					<option value='CCONL'>Castleconnell</option>
+					<option value='CGLOE'>Carrigaloe</option>
+					<option value='CGTWL'>Carrigtwohill</option>
+					<option value='CHORC'>Cherry Orchard</option>
+					<option value='CJRDN'>Cloughjordan</option>
+					<option value='CKOSH'>Carrick on Shannon</option>
+					<option value='CKOSR'>Carrick on Suir</option>
+					<option value='CLARA'>Clara</option>
+					<option value='CLBAR'>Castlebar</option>
+					<option value='CLDKN'>Clondalkin</option>
+					<option value='CLMEL'>Clonmel</option>
+					<option value='CLMRS'>Claremorris</option>
+					<option value='CLONF'>Clondalkin</option>
+					<option value='CLSLA'>Clonsilla</option>
+					<option value='CMINE'>Coolmine</option>
+					<option value='CNLLY'>Dublin Connolly</option>
+					<option value='CNOCK'>Castleknock</option>
+					<option value='COBH'>Cobh</option>
+					<option value='COLNY'>Collooney</option>
+					<option value='CORK'>Cork</option>
+					<option value='CPILE'>Campile</option>
+					<option value='CRGHW'>Craughwell</option>
+					<option value='CRLOW'>Carlow</option>
+					<option value='CSREA'>Castlerea</option>
+					<option value='CTARF'>Clontarf Road</option>
+					<option value='CURAH'>Curragh</option>
+					<option value='CVILL'>Charleville</option>
+					<option value='DBATE'>Donabate</option>
+					<option value='DBYNE'>Dunboyne</option>
+					<option value='DCDRA'>Drumcondra</option>
+					<option value='DCKLS'>Docklands</option>
+					<option value='DDALK'>Dundalk</option>
+					<option value='DGHDA'>Drogheda</option>
+					<option value='DLERY'>Dun Laoghaire</option>
+					<option value='DLKEY'>Dalkey</option>
+					<option value='DRMOD'>Dromod</option>
+					<option value='ECRTY'>Enniscorthy</option>
+					<option value='ENFLD'>Enfield</option>
+					<option value='ENNIS'>Ennis</option>
+					<option value='ETOWN'>Edgeworthstown</option>
+					<option value='FFORE'>Farranfore</option>
+					<option value='FOTA'>Fota</option>
+					<option value='FXFRD'>Foxford</option>
+					<option value='GALWY'>Galway</option>
+					<option value='GCDK'>Grand Canal Dock</option>
+					<option value='GHANE'>Glounthaune</option>
+					<option value='GLGRY'>Glenageary</option>
+					<option value='GOREY'>Gorey</option>
+					<option value='GORT'>Gort</option>
+					<option value='GRGRD'>Clongriffin</option>
+					<option value='GSTNS'>Greystones</option>
+					<option value='GSTON'>Gormanston</option>
+					<option value='HAFLD'>Hansfield</option>
+					<option value='HAZEF'>Hazelhatch</option>
+					<option value='HOWTH'>Howth</option>
+					<option value='HSTON'>Dublin Heuston</option>
+					<option value='HTOWN'>Harmonstown</option>
+					<option value='HWTHJ'>Howth Junction</option>
+					<option value='HZLCH'>Hazelhatch</option>
+					<option value='KBRCK'>Kilbarrack</option>
+					<option value='KCOCK'>Kilcock</option>
+					<option value='KCOOL'>Kilcoole</option>
+					<option value='KDARE'>Kildare</option>
+					<option value='KILNY'>Killiney</option>
+					<option value='KKNNY'>Kilkenny</option>
+					<option value='KLRNY'>Killarney</option>
+					<option value='KLSTR'>Killester</option>
+					<option value='LBURN'>Lisburn</option>
+					<option value='LDWNE'>Lansdowne Road</option>
+					<option value='LFORD'>Longford</option>
+					<option value='LMRCK'>Limerick</option>
+					<option value='LMRKJ'>Limerick Junction</option>
+					<option value='LSLND'>LittleIsland</option>
+					<option value='LTOWN'>Laytown</option>
+					<option value='LURGN'>Lurgan</option>
+					<option value='LXCON'>Leixlip (Confey)</option>
+					<option value='LXLSA'>Leixlip (Louisa Bridge)</option>
+					<option value='M3WAY'>M3 Parkway</option>
+					<option value='MDLTN'>Midleton</option>
+					<option value='MHIDE'>Malahide</option>
+					<option value='MLGAR'>Mullingar</option>
+					<option value='MLLOW'>Mallow</option>
+					<option value='MLSRT'>Millstreet</option>
+					<option value='MNEBG'>Muine Bheag</option>
+					<option value='MNLAJ'>Manulla Junction</option>
+					<option value='MONVN'>Monasterevin</option>
+					<option value='MYNTH'>Maynooth</option>
+					<option value='NBRGE'>Newbridge</option>
+					<option value='NEWRY'>Newry</option>
+					<option value='NNAGH'>Nenagh</option>
+					<option value='ORNMR'>Oranmore</option>
+					<option value='PDOWN'>Portadown</option>
+					<option value='PERSE'>Dublin Pearse</option>
+					<option value='PHNPK'>Navan Road Parkway</option>
+					<option value='PMNCK'>Portmarnock</option>
+					<option value='PTLSE'>Portlaoise</option>
+					<option value='PTRTN'>Portarlington</option>
+					<option value='PWESF'>Cherry Orchard</option>
+					<option value='RAHNY'>Raheny</option>
+					<option value='RBROK'>Rushbrooke</option>
+					<option value='RCREA'>Roscrea</option>
+					<option value='RDRUM'>Rathdrum</option>
+					<option value='RLEPT'>Rosslare Europort</option>
+					<option value='RLSTD'>Rosslare Strand</option>
+					<option value='RLUSK'>Rush and Lusk</option>
+					<option value='RMORE'>Rathmore</option>
+					<option value='RSCMN'>Roscommon</option>
+					<option value='SALNS'>Sallins</option>
+					<option value='SCOVE'>Sandycove</option>
+					<option value='SEAPT'>Seapoint</option>
+					<option value='SHILL'>Salthill</option>
+					<option value='SIDNY'>Sydney Parade</option>
+					<option value='SKILL'>Shankill</option>
+					<option value='SKRES'>Skerries</option>
+					<option value='SLIGO'>Sligo</option>
+					<option value='SMONT'>Sandymount</option>
+					<option value='SUTTN'>Sutton</option>
+					<option value='SXMBR'>Sixmilebridge</option>
+					<option value='TARA'>Tara Street</option>
+					<option value='THRLS'>Thurles</option>
+					<option value='THTWN'>Thomastown</option>
+					<option value='TIPRY'>Tipperary</option>
+					<option value='TMORE'>Tullamore</option>
+					<option value='TPMOR'>Templemore</option>
+					<option value='TRLEE'>Tralee</option>
+					<option value='WBDGE'>Wellingtonbridge</option>
+					<option value='WBROK'>Woodbrook</option>
+					<option value='WFORD'>Waterford</option>
+					<option value='WLAWN'>Woodlawn</option>
+					<option value='WLOW'>Wicklow</option>
+					<option value='WPORT'>Westport</option>
+					<option value='WXFRD'>Wexford</option>
+				</select>
+				</div>
+			
+				<div class="form-group">
+					<label class="control-label col-sm-2">Show me trains up to</label>
+					<input class="stationSelect form-control" type="text" name="timeframe" placeholder="20 minutes away">
+				</div>
+				
+				<br>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<input value="Find trains" type="submit" name="Submit" class="btn btn-primary active">
+					</div>
+				</div>
+			</form>
+				
+			<!-- data-toggle displays modal without javascript -->
+			<button type="button" class="btn btn-link" data-toggle="modal" data-target="#commuter_help">Need some help?</button>
+			
+			<div class="modal fade" id="commuter_help">
+				<div class="modal-dialog">
+					<div class="modal-content">
+
+						<!-- header -->
+						<div class="modal-header">
+							<h3 class="modal-title">What to do</h3>
+						</div>
+
+						<!-- body -->
+						<div class="modal-body">
+							<p style="text-align:center">Select the station where you plan to board and a number of minutes to see what trains are coming within that time frame!</p>
+						</div>
+
+						<!-- button -->
+						<div class="modal-footer">
+							<button type="button" class="close" data-dismiss="modal">Got it</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+				
+		</div> <!-- end of well -->
+		
+		</div>
+	
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

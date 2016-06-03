@@ -1,0 +1,126 @@
+li {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 16px;
+}	
+
+.active {
+	font-weight: bold;
+}
+
+.navbar {
+	padding: 8px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 5px;
+}
+
+.navbar-header a.navbar-brand {
+    font-size: 26px;
+	padding-right: 30px;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+	font-size: 17px !important;
+    letter-spacing: 0.3px;
+	border-radius: 0 !important;
+}
+
+.container h1 {
+	font-family: Helvetica;
+	font-size: 30px;
+}
+
+.well h2 {
+	font-family: Helvetica;
+	font-size: 22px;
+}
+
+.well .stationSelect {
+	width: 22%;
+}
+
+#popUpWindow p {
+	font-size: 18px;
+}
+
+/* Map styling */
+.map_section {
+	width: 100%;
+	margin: 30px;
+	margin-top: 0px;
+	margin-left: 50px;
+	margin-bottom: 5px;
+	height: 550px; 
+	float: left;
+	border: 1px solid #e3e3e3;
+	border-radius: 2px;
+	box-shadow: 4px 4px 6px #bbbbbb;
+}
+
+.map_buttons {
+	width: 100%;
+	margin-bottom: 0px;
+	margin-left: 50px !important;
+	margin-top: 5px;
+	float: left;
+}
+
+.side_section {
+	float: left;
+	margin: 30px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+	width: 38%;
+}
+
+#info_panel {
+	border: 1px solid #e3e3e3;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+.weather_info_text {
+	text-align: left;
+	font-family: Helvetica;
+	font-size: 18px;
+}
+
+.line_graph {
+	display: inline-block;
+	width: 46%;
+	margin: 40px 5px 40px 30px;
+	border-left: 3px solid #248f24;
+	border-bottom: 3px solid #248f24;
+}
+
+.line_graph_error {
+	display: inline-block;
+	float: right;
+	width: 46%;
+	margin: 40px 15px 40px 30px;
+}
+
+.line_graph_error p {
+	padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
